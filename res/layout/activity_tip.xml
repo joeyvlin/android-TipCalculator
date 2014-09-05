@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnPct10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etAmount"
+        android:layout_below="@+id/etAmount"
+        android:layout_marginTop="83dp"
+        android:onClick="onclick10Pct"
+        android:text="@string/ten_pct" />
+
+    <Button
+        android:id="@+id/btnPct15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnPct10"
+        android:layout_alignBottom="@+id/btnPct10"
+        android:layout_centerHorizontal="true"
+        android:onClick="onclick15Pct"
+        android:text="@string/fifteen_pct" />
+
+    <Button
+        android:id="@+id/btnPct20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnPct15"
+        android:layout_alignBottom="@+id/btnPct15"
+        android:layout_alignRight="@+id/etAmount"
+        android:onClick="onclick20Pct"
+        android:text="@string/twenty_pct" />
+
+    <TextView
+        android:id="@+id/tvTipIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnPct10"
+        android:layout_below="@+id/btnPct10"
+        android:layout_marginTop="97dp"
+        android:text="@string/tip_is"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTipIs"
+        android:layout_alignBottom="@+id/tvTipIs"
+        android:layout_alignRight="@+id/btnPct20"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
