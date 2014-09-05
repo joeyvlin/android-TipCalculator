@@ -20,22 +20,23 @@ public class TipActivity extends Activity {
 	}
 
 	public void onclick10Pct(View v) {
-		double amount = Double.parseDouble(etAmount.getText().toString());
-		this.updateTip(amount, 0.1);
+		this.updateTip(etAmount.getText().toString(), 0.1);
 	}
 	
 	public void onclick15Pct(View v) {
-		double amount = Double.parseDouble(etAmount.getText().toString());
-		this.updateTip(amount, 0.15);
+		this.updateTip(etAmount.getText().toString(), 0.15);
 	}
 	
 	public void onclick20Pct(View v) {
-		double amount = Double.parseDouble(etAmount.getText().toString());
-		this.updateTip(amount, 0.2);
+		this.updateTip(etAmount.getText().toString(), 0.2);
 	}
 		
-	private void updateTip(double amount, double multiplier) {
-		double tipAmount = amount * multiplier;
+	private void updateTip(String amount, double multiplier) {
+		if (amount == null || amount.isEmpty()) {
+			tvTip.setText("");
+			return;
+		}
+		double tipAmount = Double.parseDouble(amount) * multiplier;
 		tvTip.setText("$" + String.format("%.02f", tipAmount));
 	}
 }
