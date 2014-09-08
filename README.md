@@ -11,3 +11,6 @@ Stories Completed:
   <li>User can select between tip amounts (i.e 10%, 15%, 20%)</li>
   <li>Upon selecting tip amount, formatted tip value is displayed</li>
 </ul>
+
+<br />
+<img src="tipcalculator.gif" alt="tipcalculator.gif"/>
